@@ -51,6 +51,7 @@ public class TemperatureActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 editing = Temperature.F;
+                celsiusTemperature.setText(fahrenheitToCelsius(stringToInt(fahrenheitTemperature.getText().toString())) + "");
                 return false;
             }
         });
@@ -59,6 +60,7 @@ public class TemperatureActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 editing = Temperature.C;
+                fahrenheitTemperature.setText(celsiusToFahrenheit(stringToInt(celsiusTemperature.getText().toString())) + "");
                 return false;
             }
         });
