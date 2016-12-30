@@ -24,13 +24,11 @@ public class TemperatureActivity extends AppCompatActivity {
     }
 
     private Integer celsiusToFahrenheit(Integer temperature) {
-        Double result = Double.valueOf(temperature.toString()) * 9.0d / 5.0d + 32.0d;
-        return result.intValue();
+        return temperature * 9 / 5 + 32;
     }
 
     private Integer fahrenheitToCelsius(Integer temperature) {
-        Double result = (Double.valueOf(temperature.toString()) - 32.0d) * 5.0d / 9.0d;
-        return result.intValue();
+        return (temperature - 32) * 5 / 9;
     }
 
     private Integer stringToInt(final String number) {
